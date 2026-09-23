@@ -3,8 +3,11 @@ This file will contain set-up/installation information until a formal document i
 Check python version:
 python3 --version
 
-Update ubuntu:
+Update ubuntu/linux system packages:
 sudo apt update
+
+Upgrade ubuntu/linux system packages:
+sudo apt upgrade
 
 Install python virtual environment package:
 sudo apt install python3-venv
