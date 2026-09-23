@@ -1,0 +1,10 @@
+This folder will contain material from the course "Python for Data Science, AI & Development" hosted by IBM in Coursera.
+
+There are 4 modules:
+- Python Basics
+- Python Data Structures
+- Python Programming Fundamentals
+- Working with Data in Python
+- APIs and Data Collection
+
+This folder will follow the structure of the modules.
