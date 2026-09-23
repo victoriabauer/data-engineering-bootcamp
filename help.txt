@@ -57,3 +57,50 @@ cat requirements.txt
 
 File convention for folders with no content but want to preserve directory structure:
 .gitkeep
+
+Setting up Jupyter Notebook in Visual Studio Code:
+
+1. Activate virtual environment in project folder
+2. Installation
+
+Ensure pip is updated, if you didn't recently update:
+python3 -m pip install --upgrade pip
+
+Install jupyter and (I assume) its kernel:
+pip install jupyter ipykernal
+
+3. Create a file in chosen folder with the extention > file.ipynb
+4. Viewing the file in vs code, in top right 'select kernel'
+5. You will be prompted to install/add python/jupyter extensions > install them
+6. Select python environment: Recommended > (broken) venv/python.exe (or something to that effect)
+
+For my computer, I got error message: "Too many changes were detected. Only the first 10000 changes will be shown below."
+= vs code file watcher sees too many files/changes
+
+To fix:
+From project root, deactivate venv:
+echo "venv/" >> .gitignore
+cat .gitignore (to check)
+
+Open vs code project settings (2 ways):
+1. Add directly to project by creating folder and file
+- Add folder from project root ".vscode"
+- Add filename inside .vscode folder "settings.json"
+2. Use vs code navigation
+- Ctrl + Shift + P
+- Search "Preferences: Open Workspace Settings (JSON)"
+- The folder and file will be opened and added automatically
+3. Put in JSON, the following:
+
+{
+    "files.watcherExclude": {
+        "**/venv": true
+    },
+    "files.exclude": {
+        "**/venv": true
+    }
+}
+
+4. Reset vs code (Recommended)
+- Note saving changes updated the file watcher, so I don't see venv files in unstaged changes
+- I was able to add venv with no errors
