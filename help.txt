@@ -1,1 +1,39 @@
 This file will contain set-up/installation information until a formal document is created.
+
+Check python version:
+python3 --version
+
+Update ubuntu:
+sudo apt update
+
+Install python virtual environment package:
+sudo apt install python3-venv
+
+Navigate to project folder:
+cd ~/my-project
+
+Create virtual environment:
+python3 -m venv venv 
+(or) 
+python3 -m venv .venv
+
+Activate virtual environment:
+source venv/bin/activate
+
+Install packages from list/txt file:
+pip install -r requirements.txt
+
+Show installed packages:
+pip list
+
+Deactivte virtual environment:
+deactivate
+
+Create/update requirements.txt:
+pip freeze > requirements.txt
+
+Check requirements.txt file:
+cat requirements.txt
+
+Install <package name>:
+pip install <package name>
