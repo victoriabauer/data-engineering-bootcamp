@@ -8,3 +8,6 @@ There are 4 modules:
 - APIs and Data Collection
 
 This folder will follow the structure of the modules.
+
+I will be working with jupyter notebooks, so for organizational purposes, I will be putting notebooks in it's own folder as 
+opposed to putting notebooks spread out between modeule folders.

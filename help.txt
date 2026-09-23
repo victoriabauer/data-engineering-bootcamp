@@ -1,13 +1,21 @@
-This file will contain set-up/installation information until a formal document is created.
+This file contains set-up/installation information until a formal document is created.
 
-Check python version:
-python3 --version
+Setting up virtual environment from scratch on linux system/bash:
 
 Update ubuntu/linux system packages:
 sudo apt update
 
-Upgrade ubuntu/linux system packages:
+Upgrade ubuntu/linux system packages (If you need upgrade):
 sudo apt upgrade
+
+Combined:
+sudo apt update && sudo apt upgrade
+
+Check python version:
+python3 --version
+
+If no python installed, install python:
+sudo apt install python3
 
 Install python virtual environment package:
 sudo apt install python3-venv
@@ -22,6 +30,13 @@ python3 -m venv .venv
 
 Activate virtual environment:
 source venv/bin/activate
+
+-- Virtual environment is ready to go! --
+
+Below are steps to install and manage packages in no particular order:
+
+Install <package name>:
+pip install <package name>
 
 Install packages from list/txt file:
 pip install -r requirements.txt
@@ -38,5 +53,7 @@ pip freeze > requirements.txt
 Check requirements.txt file:
 cat requirements.txt
 
-Install <package name>:
-pip install <package name>
+-- End of package/virtual environment management --
+
+File convention for folders with no content but want to preserve directory structure:
+.gitkeep
