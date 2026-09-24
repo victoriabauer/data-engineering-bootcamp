@@ -105,19 +105,32 @@ Open vs code project settings (2 ways):
 - Note saving changes updated the file watcher, so I don't see venv files in unstaged changes
 - I was able to add venv with no errors
 
+LIES, I still could not get vs code to recognize the venv inside this project.
+Below are steps I took to troubleshoot the issue.
 
-Okay so, WSL/linux environment is not compatable with vs code python interpreter extention. So 
+The cause: Okay so, WSL/linux environment is not compatable with vs code python interpreter extention. So 
 virtual environment will need to be created in windows powershell.
 1. Delete the previous environment in linux
 rm -rf .venv
+
 2. Open powershell terminal at project root
+
 3. Create venv in windows
 py -m venv venv
+
 4. Activate venv
-- Note windows, I do not have permissions to run scripts
-venv\Scripts\activate
+- Note windows, I do not have permissions to run scripts: Computer settings > system > advanced > powershell > 
+- toggle on: change execution policy to allow local powershell scripts to run without 
+- signing. Require signing for remote scripts
+venv\Scripts\Activate.ps1
 
 5. Install dependencies
-python -m pip install --upgrade pip
+python.exe -m pip install --upgrade pip (This upgrades pip inside venv not global python)
 pip install -r requirements.txt
 pip install jupyter ipykernel
+
+6. Note about venv, I did not have to change anything with regards to gitignore or vs code settings.
+
+To view packages in venv:
+venv\Scripts\python.exe -m pip list
+
