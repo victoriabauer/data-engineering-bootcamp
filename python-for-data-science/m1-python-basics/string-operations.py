@@ -137,4 +137,6 @@ list = str => ["Bob","the","builder"]
 
 Regex is a whole other topic that will be put into regex notebook
 
+strip() = removes leading/trailing whitespace
+
 '''

@@ -10,11 +10,13 @@ Operations:
 * = multiplication
 / = float division (even if using int, result will be float)
 // = integer division
-% = remainder
+% = modulo, returns remainder after division
 
 Note: 2 / 3 = 0.6666... 2 // 3 = 0
 - The numbers after the decimal are dropped resulting in rounding down 
 - no matter if the tenths spot is 5 or more
+
+Python follows BODMAS - brackets, orders (powers, square roots), div, mult, add, sub
 
 Other helpful expressions:
 
