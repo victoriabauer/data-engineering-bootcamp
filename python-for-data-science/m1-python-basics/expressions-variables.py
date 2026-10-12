@@ -44,3 +44,20 @@ Naming conventions in python:
 - underscore to sperate words
 - ex: total_score
 '''
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import sys
+
+input = []
+
+for _ in range(2):
+    line = sys.stdin.readline().strip()
+    input.append(int(line))
+
+a = input[0]
+b = input[1]
+
+print(a//b)
+print(a%b)
+print(divmod(a,b)) #returns tuple (a//b, a%b)
